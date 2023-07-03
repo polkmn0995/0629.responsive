@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .wrap {
+        width: 90%;
+        height: 500px;
+        border: 4px solid #333;
+        margin: 0 auto;
+      }
+      .box {
+        height: 93.5px;
+        margin-bottom: 5px;
+      }
+      .box1 {
+        background-color: lightcoral;
+      }
+      .box2 {
+        background-color: lightblue;
+      }
+      .box3 {
+        background-color: lightgreen;
+      }
+      .box4 {
+        background-color: lightsalmon;
+      }
+      .box5 {
+        background-color: rgb(66, 66, 66);
+      }
+      @media screen and (min-width: 1024px) {
+        .wrap {
+          height: 106px;
+        }
+        .box {
+          width: 20%;
+          float: left;
+        }
+      }
+      @media screen and (min-width: 768px) and (max-width: 1023px) {
+        .wrap {
+          height: 303.5px;
+        }
+        .box1,
+        .box2,
+        .box3,
+        .box4 {
+          width: 50%;
+          float: left;
+        }
+        .box5 {
+          width: 100%;
+          float: right;
+        }
+      }
+      @media screen and (min-width: 320px) and (max-width: 767px) {
+        .wrap {
+          height: 500px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="box box1"></div>
+      <div class="box box2"></div>
+      <div class="box box3"></div>
+      <div class="box box4"></div>
+      <div class="box box5"></div>
+    </div>
+  </body>
+</html>

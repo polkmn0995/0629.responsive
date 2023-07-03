@@ -1,0 +1,102 @@
+@charset "utf=8";
+#gnb {
+  width: 1200px;
+  margin: 0 auto;
+  /* overflow: hidden; */
+}
+#gnb > * {
+  float: left;
+}
+#gnb > .user_menu {
+  float: right;
+}
+.main_menu {
+  overflow: hidden;
+  margin-left: 90px;
+}
+.main_menu > li {
+  float: left;
+}
+.user_menu > li {
+  float: left;
+}
+#gnb > #logo {
+  padding: 0;
+}
+#gnb > #logo img {
+  width: 130px;
+  height: 50px;
+}
+#gnb a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  display: inline-block;
+  padding: 18px 30px;
+}
+#gnb .user_menu input {
+  position: absolute;
+  left: -99999px;
+}
+#gnb .user_menu a,
+#gnb .user_menu label {
+  display: inline-block;
+  padding: 15px 10px;
+  font-size: 14px;
+  font-weight: normal;
+}
+#gnb .user_menu label {
+  display: none;
+}
+header {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  background-color: #fdfdfd;
+  height: 50px;
+}
+#menu_area {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: left 0.3s;
+}
+#menu:checked ~ #menu_area {
+  left: 0;
+}
+.user_menu > li > #menu_area > label {
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+}
+@media screen and (max-width: 1200px) {
+  #gnb {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1095px) {
+  .main_menu {
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #gnb a {
+    padding: 18px;
+    font-size: 14px;
+  }
+  .main_menu {
+    position: absolute;
+    left: 50%;
+    margin-left: -283px;
+  }
+}
+@media screen and (max-width: 810px) {
+  .main_menu {
+    display: none;
+  }
+  #gnb .user_menu label {
+    display: inline-block;
+  }
+}
